@@ -1,0 +1,61 @@
+ul {
+    list-style-type: square;
+}
+#main_heading {
+                color: darkred;
+                text-align: center;
+                font-family: cursive;
+            }
+            pre {
+                background-color: lightgray;
+                padding: 10px;
+                border: 1px solid black;
+                margin-left: 20px;
+            }
+            a:hover {
+                color: rgb(183, 149, 1);
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            li a:hover {
+                color: palevioletred;
+            }
+            .single_bosses img {
+                width: 400px;
+                height: auto;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                border: 2px solid black;
+                float: left;
+            }
+            .single_bosses::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            div {
+                font-size: 20px;
+                margin-bottom: 40px;
+                background-color: lightgray;
+
+            }
+            body{
+                background-image: url(https://static.vecteezy.com/system/resources/thumbnails/002/375/040/small/modern-white-background-free-vector.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            th {
+                text-emphasis-style: strong;
+            }
+            tr:nth-child(odd) {
+                background-color: burlywood;
+            }
+            table, th, td {
+                border: 2px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+            .favorite {
+                font-family: cursive;
+            }
