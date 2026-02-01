@@ -1,0 +1,229 @@
+.headers {
+    text-align: center;
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -0.03em;
+}
+
+.weight_adjust {
+    width: 100%;
+    max-width: 1200px;
+}
+#paragraph {
+    text-align: center;
+    color: rgb(35, 34, 34);
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 900px;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+    margin: 0;
+    padding: 20px;
+    font-family: "Mona Sans", "Mona Sans Header Fallback", 
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.trial-btn{
+    display: block;
+    margin: 24px auto;
+}
+
+.purchase{
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap:30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.description{
+    text-align: center;
+    color:hsl(210, 10%, 30%);
+    margin-bottom: 20px;
+    margin-top: -12px;
+    font-size: 14px;
+}
+span {
+    font-size:200%;
+}
+.purchase-box{
+    background: #ffffff;
+    border-radius: 8px;
+    border-color:#d3d2d2;
+    border-width: 2px;
+    border-style: solid;
+    padding: 20px;
+    width: 340px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.12);
+}
+
+.purchase-box h3{
+    margin: 0;
+    font-size: 20px;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+}
+
+.features{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color:whitesmoke;
+    text-align: left;
+    padding: 10px;
+    flex-grow: 1; 
+}
+
+.feature{
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.black-btn{
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    padding: 12px 16px;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(49, 48, 48, 0.98) 10%, #000 100%); 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22); 
+}
+
+.black-btn:hover{
+box-shadow: 0 14px 36px rgba(0,0,0,0.26);
+background: linear-gradient(180deg, #404040 20%, #000 100%);
+}
+
+.button-row{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.white-btn{
+    position: relative;
+    overflow: hidden;
+    background: white; /* subtle soft tint */
+    border: 1px solid rgba(65, 64, 64, 0.18);
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: transform .12s ease, background .12s ease;
+}
+
+.white-btn::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid rgba(65,64,64,0);
+    transform: scale(.96);
+    opacity: 0;
+    transition: transform .18s ease, opacity .18s ease, border-color .18s;
+    pointer-events: none;
+}
+
+.white-btn:hover::after{
+    border-color: rgba(65,64,64,0.28);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.add-ons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+.addon-box{
+    display: block; 
+    background: #ffffff;
+    border-radius: 6px;
+    border: solid 1px #b3b4b5;
+    padding: 20px;
+    width: 350px;
+    height: auto;
+    box-shadow: 0 6px 18px rgba(15, 15, 15, 0.06);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 140px;
+    cursor: pointer;
+}
+
+.addon-head{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    align-items:flex-start;
+}
+
+.icon{
+    width:40px;
+    height:40px;
+    background:#0366d6;
+    color:#fff;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+
+.addon-name{
+    font-weight:700;
+    font-size:16px;
+}
+
+.addon-desc{
+    margin: 0;
+    color: hsl(210, 10%, 30%);
+    font-size: 14px;
+}
+
+.learn-more{
+    margin-top: auto;
+    font-size: 14px;
+}
+
+.addon-box:hover{
+    box-shadow: 0 10px 24px rgba(15,15,15,0.1);
+    transform: scale(1.02, 1.02);
+    transition: 0.12s ease;
+}
+
+@media (max-width: 860px){
+    .purchase-box{ width: 45%; }
+    .add-ons{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px){
+    .purchase-box{ width: 100%; }
+    .add-ons{ grid-template-columns: 1fr; }
+}
