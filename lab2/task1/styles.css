@@ -1,0 +1,132 @@
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: #f0f2f5;
+  color: #1c1e21;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-size: 24px;
+}
+
+
+.page-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 300px;
+    margin-top: 200px;
+}
+
+.brand {
+  flex: 1 1 48%;
+  display:flex;
+  align-items: right;
+}
+.brand-inner { width: 400px; }
+.fb-logo {
+  display: block;
+  width: auto;
+  height: 106px;
+  margin: -28px;
+
+}
+.fb-slogan {
+  font-size: 24px;
+  line-height: 28px;
+  color: #050505;
+  margin: 0;
+  line-height: 1.2;
+  margin-top: 12px;
+}
+
+.login-area {
+  width: 360px;
+  height: auto;
+  flex: 0 0 360px;
+}
+.login-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.login-form { display: flex; flex-direction: column; gap: 12px; }
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.input::placeholder { color: #8a8d91; }
+.input:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 0 3px rgba(24,119,242,0.08);
+}
+
+.btn {
+  padding: 10px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.login-btn {
+  background: #1877f2;
+  color: #fff;
+  font-weight: 600;
+}
+.login-btn:hover {background: #165fc6;}
+
+.create-btn {
+  background: #42b72a;
+  color: #fff;
+  font-weight: 600;
+  box-sizing: border-box;
+  width: 70%;
+  align-self: center;
+}
+.create-btn:hover { background: #36a01d; }
+
+.forgot-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: #1877f2;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer; 
+}
+.forgot-link:hover { text-decoration: underline; }
+
+
+.divider {
+  height: 1px;
+  background: transparent;
+  margin: 10px 0 0 0;
+  border-top: 1px solid #e9ebee;
+}
+
+.create-note {
+  color: black;
+  margin: 12px 0 0 0;
+  font-size: 13px;
+  text-align: center;
+}
+.create-note-link {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.create-note-link:hover { text-decoration: underline; }
+
+
+:focus { outline: none; }
+:focus-visible { outline: 3px solid rgba(24,119,242,0.18); border-radius:6px; }
+
+
+
