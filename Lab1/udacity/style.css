@@ -1,0 +1,32 @@
+#menu {
+        text-align: center;
+        }
+
+        .item {
+        color: red;
+        }
+
+        .picture {
+        border-radius: 5px;
+        }
+
+        .description {
+        font-style: italic;
+        }
+        img {
+        width: 300px;
+        }
+
+.logo {
+    background: left/cover
+    url("https://cdn.shopify.com/s/files/1/0533/2089/files/header-design-position-absolute_fcabc9a2-0fdb-4057-a6fb-f84f16840eba.png?v=1507118933");
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    font:
+        bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+        fantasy;
+    color: #ff0083;
+    text-shadow: #000 2px 2px 0.2rem;
+}

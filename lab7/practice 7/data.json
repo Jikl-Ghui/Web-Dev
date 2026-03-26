@@ -1,0 +1,25 @@
+[
+    {
+        "vehicle_type": "Vehicle",
+        "brand": "Ford",
+        "model": "Tractor",
+        "year": 1990,
+        "is_running": false
+    },
+    {
+        "vehicle_type": "Car",
+        "brand": "Toyota",
+        "model": "Camry",
+        "year": 2023,
+        "is_running": false,
+        "num_doors": 4
+    },
+    {
+        "vehicle_type": "Motorcycle",
+        "brand": "Yamaha",
+        "model": "R1",
+        "year": 2024,
+        "is_running": true,
+        "has_sidecar": false
+    }
+]
