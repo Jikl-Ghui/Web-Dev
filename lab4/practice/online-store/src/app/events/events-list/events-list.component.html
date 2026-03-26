@@ -1,0 +1,14 @@
+<section class="page">
+  <header class="hero">
+    <h1 class="hero__title">Ticketon Events</h1>
+    <p class="hero__subtitle">
+      Ивенты из тиккетона; лень добавлять фото
+    </p>
+  </header>
+
+  <div class="grid" aria-label="Events catalog">
+    @for (ev of events; track ev.id) {
+      <app-event-card [event]="ev" />
+    }
+  </div>
+</section>

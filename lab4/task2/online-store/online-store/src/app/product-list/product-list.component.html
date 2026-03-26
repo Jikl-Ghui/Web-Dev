@@ -1,0 +1,74 @@
+<section class="page">
+  <header class="page__header">
+    <div>
+      <h1 class="page__title">Kaspi.kz Product Catalog</h1>
+      <p class="page__subtitle">10 products</p>
+    </div>
+  </header>
+
+  <div class="grid" role="list">
+    <article class="card" role="listitem" *ngFor="let p of products; trackBy: trackById">
+      <div class="gallery" aria-label="Product image gallery">
+  <a class="gallery__mainLink" [href]="p.link" target="_blank" rel="noopener noreferrer" aria-label="Open product on Kaspi.kz">
+    <img class="gallery__main" [src]="selectedImageUrl(p)" [alt]="p.name" loading="lazy" />
+  </a>
+
+  <button class="gallery__nav gallery__nav--prev" type="button" (click)="prevImage(p)" aria-label="Previous image">‹</button>
+  <button class="gallery__nav gallery__nav--next" type="button" (click)="nextImage(p)" aria-label="Next image">›</button>
+
+  <div class="gallery__thumbs" aria-label="Thumbnails">
+    <button class="thumb"
+            type="button"
+            *ngFor="let img of p.images; let i = index"
+            (click)="selectImage(p, i)"
+            [class.active]="i === getSelectedIndex(p)"
+            [attr.aria-label]="'Show image ' + (i + 1) + ' of ' + p.images.length">
+      <img [src]="img" [alt]="p.name + ' thumbnail ' + (i + 1)" loading="lazy" />
+    </button>
+  </div>
+</div>
+
+      <div class="card__body">
+        <h2 class="card__title">
+          <a [href]="p.link" target="_blank" rel="noopener noreferrer">{{ p.name }}</a>
+        </h2>
+
+        <p class="card__desc">{{ p.description }}</p>
+
+        <div class="card__meta">
+          <span class="price">{{ formatPriceKzt(p.price) }}</span>
+
+          <span class="rating" [attr.aria-label]="'Rating ' + p.rating + ' out of 5'">
+            <span class="stars" aria-hidden="true">
+              <span *ngFor="let s of stars">
+                <span [class.filled]="s < filledStars(p.rating)">★</span>
+              </span>
+            </span>
+            <span class="badge">{{ p.rating }}</span>
+          </span>
+        </div>
+
+        <a class="card__cta" [href]="p.link" target="_blank" rel="noopener noreferrer">
+          Open on Kaspi.kz ↗
+        </a>
+
+        <div class="card__actions" aria-label="Share product">
+          <a class="share share--wa"
+             [href]="whatsAppShareUrl(p.link)"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Share on WhatsApp">
+            WhatsApp
+          </a>
+          <a class="share share--tg"
+             [href]="telegramShareUrl(p.link, p.name)"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Share on Telegram">
+            Telegram
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

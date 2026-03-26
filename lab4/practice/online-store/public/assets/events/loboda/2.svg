@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <circle cx="1030" cy="120" r="150" fill="#38bdf8" opacity="0.25"/>
+  <circle cx="170" cy="560" r="220" fill="#a78bfa" opacity="0.18"/>
+  <text x="80" y="170" font-family="Inter,Arial,sans-serif" font-size="64" fill="#ffffff" font-weight="800">LOBODA — Алматы</text>
+  <text x="80" y="240" font-family="Inter,Arial,sans-serif" font-size="30" fill="#e2e8f0" opacity="0.95">Ticketon event poster (placeholder)</text>
+  <text x="80" y="600" font-family="Inter,Arial,sans-serif" font-size="22" fill="#e2e8f0" opacity="0.85">Gallery image 2 • local asset</text>
+</svg>

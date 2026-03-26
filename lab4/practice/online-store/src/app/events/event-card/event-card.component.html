@@ -1,0 +1,65 @@
+<article class="card">
+  <div class="media">
+    <a class="media__link" [href]="event().link" target="_blank" rel="noopener noreferrer">
+      <img class="media__img" [src]="activeImage()" [alt]="event().name" />
+    </a>
+
+    <div class="thumbs" aria-label="Event image gallery">
+      <button class="thumbs__nav" type="button" (click)="prev()" aria-label="Previous image">
+        ‹
+      </button>
+
+      <div class="thumbs__row">
+        @for (img of event().images; track $index) {
+          <button
+            class="thumb"
+            type="button"
+            (click)="setActive($index)"
+            [attr.aria-label]="'Select image ' + ($index + 1)"
+          >
+            <img [src]="img" [alt]="event().name + ' thumbnail ' + ($index + 1)" />
+          </button>
+        }
+      </div>
+
+      <button class="thumbs__nav" type="button" (click)="next()" aria-label="Next image">
+        ›
+      </button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="title-row">
+      <h3 class="title">
+        <a [href]="event().link" target="_blank" rel="noopener noreferrer">{{ event().name }}</a>
+      </h3>
+      <div class="rating" [attr.aria-label]="'Rating ' + event().rating + ' out of 5'">
+        @for (n of fullStarsArr(); track $index) {
+          <span class="star star--full" aria-hidden="true">★</span>
+        }
+        @if (hasHalfStar()) {
+          <span class="star star--half" aria-hidden="true">★</span>
+        }
+        @for (n of emptyStarsArr(); track $index) {
+          <span class="star star--empty" aria-hidden="true">☆</span>
+        }
+        <span class="rating__num">{{ event().rating.toFixed(1) }}</span>
+      </div>
+    </div>
+
+    <p class="desc">{{ event().description }}</p>
+
+    <div class="bottom">
+      <div class="price">{{ event().price | number }} ₸</div>
+
+      <div class="actions">
+        <button class="btn" type="button" (click)="shareWhatsApp()">
+          Share WhatsApp
+        </button>
+        <button class="btn btn--secondary" type="button" (click)="shareTelegram()">
+          Share Telegram
+        </button>
+      </div>
+    </div>
+  </div>
+</article>
